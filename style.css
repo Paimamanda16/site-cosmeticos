@@ -1,0 +1,488 @@
+/* RESET */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #140a05;
+    overflow-x: hidden;
+    color: #f5ede4;
+}
+
+/* HEADER */
+
+.header{
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 80px;
+
+    z-index: 1000;
+
+    background: rgba(20, 10, 5, 0.92);
+
+    backdrop-filter: blur(5px);
+
+    border-bottom: 1px solid rgba(200,150,62,0.15);
+}
+
+/* CONTAINER */
+
+.container{
+    max-width: 1200px;
+
+    height: 100%;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 25px;
+}
+
+/* LOGO */
+
+.logo{
+    height: 90px;
+  
+    object-fit: contain;
+}
+
+/* MENU */
+
+.menu{
+    display: flex;
+    gap: 30px;
+}
+
+.menu a{
+    text-decoration: none;
+
+    color: #f5ede4;
+
+    font-weight: 600;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.menu a:hover{
+    color: #C89B3C;
+}
+
+/* BANNER */
+
+.banner{
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    padding-top: 90px;
+
+    background-image: url('img/ChatGPT Image 6 de mai. de 2026, 16_27_30.png');
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+    background-position: center 60px;
+
+    position: relative;
+}
+
+/* ESCURECE A IMAGEM */
+
+.banner::before{
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.45);
+}
+
+/* CONTEÚDO */
+
+.conteudo-banner{
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 600px;
+
+    padding-left: 80px;
+}
+
+/* TITULO */
+
+.conteudo-banner h1{
+
+    font-size: 38px;
+
+    line-height: 1.1;
+
+    font-weight: bold;
+
+    color: #f5ede4;
+
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+}
+
+/* DESTAQUE */
+
+.conteudo-banner span{
+
+    color: #C89B3C;
+}
+
+/* TEXTO */
+
+.conteudo-banner p{
+
+    margin-top: 20px;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    color: #ddd;
+
+    max-width: 500px;
+}
+
+/* BOTÃO */
+
+.botao{
+
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 14px 28px;
+
+    background: #C89B3C;
+
+    color: white;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.botao:hover{
+
+    background: #a77724;
+
+    transform: translateY(-2px);
+}
+
+/* CARDS */
+
+.cards-container{
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: stretch;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    padding: 70px 20px;
+
+    background: linear-gradient(to bottom, #140a05, #0d0502);
+}
+
+/* CARD */
+
+.product-card{
+
+    width: 220px;
+
+    background: rgba(27,12,5,0.95);
+
+    border: 1px solid rgba(200,150,62,0.4);
+
+    border-radius: 14px;
+
+    padding: 15px;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.product-card:hover{
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 0 18px rgba(200,150,62,0.3);
+}
+
+/* IMAGEM */
+
+.product-card img{
+
+    width: 100%;
+
+    height: 140px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+/* TITULO CARD */
+
+.product-card h3{
+
+    margin-top: 18px;
+
+    font-size: 22px;
+
+    line-height: 1.3;
+
+    color: #f2d4a4;
+}
+
+/* TEXTO CARD */
+
+.product-card p{
+
+    margin: 14px 0;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+
+    color: #d8d8d8;
+}
+
+/* BOTÃO CARD */
+
+.product-card button{
+
+    margin-top: 10px;
+
+    padding: 10px 18px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #C89B3C;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.product-card button:hover{
+
+    background: #a77724;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+    .header{
+        height: auto;
+        padding: 15px 0;
+    }
+
+    .container{
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .menu{
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+    .banner{
+
+        background-position: center;
+    }
+
+    .conteudo-banner{
+
+        padding: 20px;
+    }
+
+    .conteudo-banner h1{
+
+        font-size: 38px;
+    }
+
+    .conteudo-banner p{
+
+        font-size: 16px;
+    }
+
+    .product-card{
+
+        width: 100%;
+        max-width: 300px;
+    }
+}
+.product-card h3{
+    font-size: 15px;
+}
+/* FAIXA */
+
+.faixa-imagem{
+
+    width: 100%;
+
+    height: 400px;
+
+    background-image: url('img/sua-imagem.png');
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+    background-position: center;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+/* ESCURECE A FOTO */
+
+.overlay-faixa{
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: rgba(0,0,0,0.45);
+}
+
+/* TEXOS */
+
+.conteudo-faixa{
+
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+.conteudo-faixa h2{
+
+    color: #f5ede4;
+
+    font-size: 42px;
+
+    margin-bottom: 15px;
+
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+}
+
+.conteudo-faixa p{
+
+    color: #ddd;
+
+    font-size: 18px;
+
+    max-width: 600px;
+}
+/* FAIXA */
+
+.faixa-imagem{
+
+    width: 100%;
+
+    height: 800px;
+
+    background-image: url(img/Gemini_Generated_Image_78xqi478xqi478xq.png);
+    background-repeat: no-repeat;   
+    position: relative;
+    top: 4px; /* Move a imagem 50px para baixo a partir de onde ela estaria */
+    display: flex;
+    align-items: center;
+    background-position: contain;,
+    justify-content: center;
+}
+
+/* ESCURECE A FOTO */
+
+.overlay-faixa{
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: rgba(0,0,0,0.45);
+}
+
+/* TEXOS */
+
+.conteudo-faixa{
+
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
