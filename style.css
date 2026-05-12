@@ -1,3 +1,7 @@
+/* IMPORTAR FONTE ELEGANTE */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
 /* RESET */
 
 *{
@@ -6,59 +10,65 @@
     box-sizing: border-box;
 }
 
+/* CORES DA MARCA */
+
+:root{
+    --rosa: #f5d6de;
+    --rosa-escuro: #d88ca0;
+    --creme: #fff8f4;
+    --dourado: #c8a46a;
+    --marrom: #4e342e;
+    --marrom-escuro: #2d1b18;
+    --texto: #5b4a45;
+}
+
 /* BODY */
 
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #140a05;
+    font-family: 'Montserrat', sans-serif;
+    background: var(--creme);
+    color: var(--texto);
     overflow-x: hidden;
-    color: #f5ede4;
 }
 
 /* HEADER */
 
 .header{
     position: fixed;
-
     top: 0;
     left: 0;
 
     width: 100%;
-    height: 80px;
+    height: 90px;
 
     z-index: 1000;
 
-    background: rgba(20, 10, 5, 0.92);
 
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
 
-    border-bottom: 1px solid rgba(200,150,62,0.15);
+    border-bottom: 1px solid rgba(200,164,106,0.2);
 }
 
 /* CONTAINER */
 
 .container{
     max-width: 1200px;
+    margin: 0 auto;
 
     height: 100%;
 
-    margin: 0 auto;
-
     display: flex;
-
+    justify-content: space-between;
     align-items: center;
 
-    justify-content: space-between;
-
-    padding: 0 25px;
+    padding: 0 30px;
 }
 
 /* LOGO */
 
 .logo{
-    height: 90px;
-  
-    object-fit: contain;
+    height: 150px;
+    margin-top: 10px;
 }
 
 /* MENU */
@@ -70,243 +80,257 @@ body{
 
 .menu a{
     text-decoration: none;
-
-    color: #f5ede4;
-
-    font-weight: 600;
+    color: var(--marrom);
 
     font-size: 14px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
 
     transition: 0.3s;
 }
 
 .menu a:hover{
-    color: #C89B3C;
+    color: #8B5E3C;
 }
 
 /* BANNER */
 
 .banner{
-
     min-height: 100vh;
 
-    display: flex;
-
-    align-items: center;
-
-    padding-top: 90px;
-
-    background-image: url('img/ChatGPT Image 6 de mai. de 2026, 16_27_30.png');
-
-    background-repeat: no-repeat;
+    background-image: url("img/f132540b-7a85-4787-8652-32bb7b69959e.png");
 
     background-size: cover;
+    background-position: center -250px;
+    background-repeat: no-repeat;
 
-    background-position: center 60px;
+    display: flex;
+    align-items: center;
 
     position: relative;
+
+    padding-top: 90px;
 }
 
-/* ESCURECE A IMAGEM */
+/* OVERLAY */
 
 .banner::before{
-
     content: "";
 
     position: absolute;
 
-    top: 0;
-    left: 0;
-
     width: 100%;
     height: 100%;
 
-    background: rgba(0,0,0,0.45);
+    background: rgba(255,240,245,0.35);
 }
 
-/* CONTEÚDO */
+/* CONTEÚDO BANNER */
 
 .conteudo-banner{
-
     position: relative;
-
     z-index: 2;
 
-    max-width: 600px;
+    max-width: 650px;
 
     padding-left: 80px;
 }
 
-/* TITULO */
-
 .conteudo-banner h1{
+    font-family: 'Cormorant Garamond', serif;
 
-    font-size: 38px;
+    font-size: 40px;
+    line-height: 1;
 
-    line-height: 1.1;
+    color: var(--marrom);
 
-    font-weight: bold;
+    font-weight: 600;
 
-    color: #f5ede4;
-
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+    text-shadow: 2px 2px 18px rgba(0,0,0,0.35);
 }
-
-/* DESTAQUE */
 
 .conteudo-banner span{
-
-    color: #C89B3C;
-}
-
-/* TEXTO */
-
-.conteudo-banner p{
-
-    margin-top: 20px;
-
-    font-size: 18px;
-
-    line-height: 1.6;
-
-    color: #ddd;
-
-    max-width: 500px;
+    color: var(--rosa);
 }
 
 /* BOTÃO */
 
 .botao{
-
     display: inline-block;
 
-    margin-top: 30px;
+    margin-top: 35px;
 
-    padding: 14px 28px;
+    padding: 16px 34px;
 
-    background: #C89B3C;
+    background: linear-gradient(135deg, #f5d6de, #d88ca0);
 
-    color: white;
-
-    border-radius: 6px;
+    color:(var(--marrom-escuro));
 
     text-decoration: none;
 
-    font-weight: bold;
+    border-radius: 40px;
 
-    transition: 0.3s;
+    font-size: 13px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    box-shadow: 0 8px 20px rgba(216,140,160,0.25);
+
+    transition: 0.4s;
 }
 
 .botao:hover{
-
-    background: #a77724;
-
-    transform: translateY(-2px);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(216,140,160,0.35);
 }
 
 /* CARDS */
 
 .cards-container{
-
     width: 100%;
 
     display: flex;
-
     justify-content: center;
-
-    align-items: stretch;
-
     flex-wrap: wrap;
 
-    gap: 25px;
+    gap: 35px;
 
-    padding: 70px 20px;
+    padding: 30px 20px;
 
-    background: linear-gradient(to bottom, #140a05, #0d0502);
+    background: linear-gradient(to bottom, #fff8f4, #fdeff2);
+}
+
+/* CARD */
+
+/* APAGUE SEU .cards-container ANTIGO */
+/* E COLE ESSE NOVO CSS */
+
+.cards-rotativo{
+    width: 100%;
+    overflow: hidden;
+
+    padding: 60px 0;
+
+    background: linear-gradient(to bottom, #fff8f4, #fdeff2);
+}
+
+.slider{
+    display: flex;
+    gap: 35px;
+
+    width: max-content;
+
+    animation: rotacao 18s linear infinite;
+}
+
+/* PAUSA AO PASSAR O MOUSE */
+
+.slider:hover{
+    animation-play-state: paused;
+}
+
+/* ANIMAÇÃO */
+
+@keyframes rotacao{
+
+    0%{
+        transform: translateX(0);
+    }
+
+    100%{
+        transform: translateX(-50%);
+    }
 }
 
 /* CARD */
 
 .product-card{
+    width: 400px;
 
-    width: 220px;
+    background: rgba(255,255,255,0.55);
 
-    background: rgba(27,12,5,0.95);
+    backdrop-filter: blur(12px);
 
-    border: 1px solid rgba(200,150,62,0.4);
+    border-radius: 24px;
 
-    border-radius: 14px;
-
-    padding: 15px;
+    padding: 22px;
 
     text-align: center;
 
-    transition: 0.3s;
+    border: 1px solid rgba(216,140,160,0.15);
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    gap: 15px;
+
+   
 }
 
 .product-card:hover{
+    transform: translateY(-10px);
 
-    transform: translateY(-6px);
-
-    box-shadow: 0 0 18px rgba(200,150,62,0.3);
+    box-shadow: 0 20px 40px rgba(216,140,160,0.18);
 }
 
 /* IMAGEM */
-
 .product-card img{
-
-    width: 100%;
-
-    height: 140px;
+    width: 90%;
+    height: 320px;
 
     object-fit: cover;
 
-    border-radius: 10px;
+    border-radius: 18px;
+
+    display: block;
 }
 
-/* TITULO CARD */
+/* TITULO */
 
 .product-card h3{
-
     margin-top: 18px;
 
-    font-size: 22px;
+    font-family: 'Cormorant Garamond', serif;
 
-    line-height: 1.3;
+    font-size: 24px;
 
-    color: #f2d4a4;
+    line-height: 1.1;
+
+    color: var(--marrom);
 }
 
-/* TEXTO CARD */
+/* TEXTO */
 
 .product-card p{
+    margin-top: 15px;
 
-    margin: 14px 0;
+    font-size: 14px;
 
-    font-size: 15px;
+    line-height: 1.7;
 
-    line-height: 1.5;
-
-    color: #d8d8d8;
+    color: #7a6a65;
 }
 
-/* BOTÃO CARD */
+/* BOTÃO */
 
 .product-card button{
+    margin-top: 20px;
 
-    margin-top: 10px;
-
-    padding: 10px 18px;
+    padding: 12px 24px;
 
     border: none;
 
-    border-radius: 6px;
+    border-radius: 30px;
 
-    background: #C89B3C;
+    background: linear-gradient(135deg, #f5d6de, #d88ca0);
 
     color: white;
 
-    font-weight: bold;
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
 
     cursor: pointer;
 
@@ -314,13 +338,157 @@ body{
 }
 
 .product-card button:hover{
+    transform: scale(1.05);
+}
+/* FAIXA */
 
-    background: #a77724;
+.faixa-imagem{
+    width: 100%;
+
+    min-height: 550px;
+
+    background-image: url("img/68a98b05-6978-4706-87bc-cb85967cd741.png");
+
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+.overlay-faixa{
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(255,240,245,0.35);
+}
+
+.conteudo-faixa{
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+
+    max-width: 900px;
+}
+
+.conteudo-faixa h2{
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 70px;
+
+    color: white;
+
+    line-height: 1.1;
+
+    text-shadow: 2px 2px 20px rgba(0,0,0,0.35);
+}
+
+/* FOOTER */
+
+footer{
+    background: #fff4f6;
+
+    padding: 60px 20px;
+
+    border-top: 1px solid rgba(216,140,160,0.2);
+}
+
+#footer-content{
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+}
+
+#footer-contacts h1{
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 42px;
+
+    color: var(--marrom);
+}
+
+#footer-contacts p{
+    margin-top: 12px;
+
+    color: #7a6a65;
+
+    line-height: 1.7;
+}
+
+#footer-social{
+    display: flex;
+    gap: 16px;
+
+    flex-wrap: wrap;
+}
+
+.footer-link{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    text-decoration: none;
+
+    background: white;
+
+    color: var(--marrom);
+
+    padding: 14px 20px;
+
+    border-radius: 40px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+
+    transition: 0.3s;
+}
+
+.footer-link:hover{
+    background: var(--rosa-escuro);
+    color: white;
+
+    transform: translateY(-4px);
 }
 
 /* RESPONSIVO */
 
-@media(max-width:768px){
+/* =========================
+RESPONSIVO COMPLETO
+========================= */
+
+@media(max-width: 1200px){
+
+    .container{
+        padding: 0 20px;
+    }
+
+    .conteudo-banner{
+        padding-left: 40px;
+    }
+
+    .product-card{
+        width: 340px;
+    }
+
+}
+
+/* TABLET */
+
+@media(max-width: 992px){
 
     .header{
         height: auto;
@@ -328,161 +496,238 @@ body{
     }
 
     .container{
-
         flex-direction: column;
-
-        gap: 15px;
+        gap: 20px;
     }
 
     .menu{
-
         flex-wrap: wrap;
-
         justify-content: center;
+        gap: 18px;
+    }
 
-        gap: 15px;
+    .logo{
+        height: 120px;
     }
 
     .banner{
-
         background-position: center;
+        padding-top: 140px;
     }
 
     .conteudo-banner{
-
-        padding: 20px;
+        padding: 30px;
+        max-width: 100%;
     }
 
     .conteudo-banner h1{
-
-        font-size: 38px;
+        font-size: 58px;
+        line-height: 1.1;
     }
 
-    .conteudo-banner p{
-
-        font-size: 16px;
+    .conteudo-faixa h2{
+        font-size: 52px;
     }
 
     .product-card{
-
-        width: 100%;
-        max-width: 300px;
+        width: 300px;
     }
-}
-.product-card h3{
-    font-size: 15px;
-}
-/* FAIXA */
 
-.faixa-imagem{
+    .product-card img{
+        height: 260px;
+    }
 
-    width: 100%;
-
-    height: 400px;
-
-    background-image: url('img/sua-imagem.png');
-
-    background-repeat: no-repeat;
-
-    background-size: cover;
-
-    background-position: center;
-
-    position: relative;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
 }
 
-/* ESCURECE A FOTO */
+/* CELULAR */
 
-.overlay-faixa{
+@media(max-width: 768px){
 
-    position: absolute;
+    body{
+        overflow-x: hidden;
+    }
 
-    width: 100%;
+    .header{
+        padding: 12px 0;
+    }
 
-    height: 100%;
+    .container{
+        flex-direction: column;
+        gap: 15px;
+    }
 
-    background: rgba(0,0,0,0.45);
+    .logo{
+        height: 95px;
+    }
+
+    .menu{
+        gap: 14px;
+    }
+
+    .menu a{
+        font-size: 12px;
+    }
+
+    .banner{
+        min-height: 90vh;
+
+        background-position: center;
+        background-size: cover;
+
+        padding-top: 140px;
+    }
+
+    .conteudo-banner{
+        padding: 20px;
+        text-align: center;
+    }
+
+    .conteudo-banner h1{
+        font-size: 42px;
+    }
+
+    .botao{
+        padding: 14px 28px;
+        font-size: 12px;
+    }
+
+    /* CARROSSEL */
+
+    .cards-rotativo{
+        padding: 40px 0;
+    }
+
+    .slider{
+        gap: 20px;
+    }
+
+    .product-card{
+        width: 260px;
+
+        padding: 18px;
+
+        border-radius: 20px;
+    }
+
+    .product-card img{
+        width: 100%;
+        height: 220px;
+
+        object-fit: cover;
+
+        border-radius: 16px;
+
+        display: block;
+    }
+
+    .product-card h3{
+        font-size: 22px;
+    }
+
+    .product-card p{
+        font-size: 13px;
+    }
+
+    .product-card button{
+        width: 100%;
+    }
+
+    /* FAIXA */
+
+    .faixa-imagem{
+        min-height: 350px;
+    }
+
+    .conteudo-faixa h2{
+        font-size: 34px;
+        padding: 0 10px;
+    }
+
+    /* FOOTER */
+
+    footer{
+        padding: 40px 20px;
+    }
+
+    #footer-content{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #footer-social{
+        justify-content: center;
+    }
+
+    .footer-link{
+        width: 100%;
+        justify-content: center;
+    }
+
 }
 
-/* TEXOS */
+/* CELULAR PEQUENO */
 
-.conteudo-faixa{
+@media(max-width: 480px){
 
-    position: relative;
+    .conteudo-banner h1{
+        font-size: 34px;
+    }
 
-    z-index: 2;
+    .product-card{
+        width: 220px;
+    }
 
-    text-align: center;
+    .product-card img{
+        height: 190px;
+    }
 
-    padding: 20px;
+    .conteudo-faixa h2{
+        font-size: 28px;
+    }
+
+    #footer-contacts h1{
+        font-size: 32px;
+    }
+
+
+
+}/* RESPONSIVO DA FAIXA */
+
+@media(max-width:768px){
+
+    .faixa-imagem{
+        width: 100%;
+
+        min-height: 320px;
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        padding: 30px 15px;
+
+        overflow: hidden;
+    }
+
+    .overlay-faixa{
+        width: 100%;
+        height: 100%;
+    }
+
+    .conteudo-faixa{
+        width: 100%;
+
+        padding: 0 10px;
+
+        text-align: center;
+    }
+
+    .conteudo-faixa h2{
+        font-size: 30px;
+
+        line-height: 1.2;
+
+        word-break: break-word;
+    }
+
 }
-
-.conteudo-faixa h2{
-
-    color: #f5ede4;
-
-    font-size: 42px;
-
-    margin-bottom: 15px;
-
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
-}
-
-.conteudo-faixa p{
-
-    color: #ddd;
-
-    font-size: 18px;
-
-    max-width: 600px;
-}
-/* FAIXA */
-
-.faixa-imagem{
-
-    width: 100%;
-
-    height: 800px;
-
-    background-image: url(img/Gemini_Generated_Image_78xqi478xqi478xq.png);
-    background-repeat: no-repeat;   
-    position: relative;
-    top: 4px; /* Move a imagem 50px para baixo a partir de onde ela estaria */
-    display: flex;
-    align-items: center;
-    background-position: contain;,
-    justify-content: center;
-}
-
-/* ESCURECE A FOTO */
-
-.overlay-faixa{
-
-    position: absolute;
-
-    width: 100%;
-
-    height: 100%;
-
-    background: rgba(0,0,0,0.45);
-}
-
-/* TEXOS */
-
-.conteudo-faixa{
-
-    position: relative;
-
-    z-index: 2;
-
-    text-align: center;
-
-    padding: 20px;
-}
-
